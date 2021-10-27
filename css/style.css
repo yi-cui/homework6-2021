@@ -5,10 +5,10 @@ body{
     font-size: 16pt; /* test for this! Make all sizes em or rem */
     background-image: url('../images/concrete_seamless.png');
     background-repeat:repeat;
-    background-color: #1f1f1f;
+    background: #1f1f1f;
 }
 
-header{
+body>header{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
     display: flex;
@@ -82,7 +82,7 @@ a:visited{
 .pricing{
     min-height: 475px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
 }
 
@@ -102,6 +102,7 @@ a:visited{
     padding: 0 0 25px 0;
     display: flex;
     flex-direction: column; 
+    flex-basis: 450px;
 }
 
 .card > ul{
