@@ -1,0 +1,234 @@
+body{
+    font-family: 'Alegreya Sans SC',serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16pt; /* test for this! Make all sizes em or rem */
+    background-image: url('../images/concrete_seamless.png');
+    background-repeat:repeat;
+    background-color: #1f1f1f;
+}
+
+header{
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+}
+
+h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+}
+
+p {
+    padding: 0 30px;
+}
+
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+*:focus{
+    border: 2px solid black;
+}
+
+
+.nav_item a{
+    padding: 10px;
+}
+
+.nav_item a:hover, a:focus{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+    text-decoration-style: dotted;
+}
+
+a:visited{
+    color:blue;
+}
+
+
+.pricing{
+    min-height: 475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card header{
+    background-color: #288080;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid #45ADAD;
+    border-radius: 7px 7px 0px 0px ;
+}
+
+.card {
+    margin: 12px;
+    width: 450px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+.card > ul{
+    list-style: none;
+    padding-left: 5px;
+}
+
+.card > ul li {
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+.card button{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    margin-left: 5%;
+    border-radius: 7px;
+    background: #288080;
+    color: white;
+    font-size: 1em;
+}
+
+.card h3{
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+.card_big{
+    -webkit-transform: initial;
+    transform: initial;
+}
+
+.gallery{
+    min-height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 300px;
+    margin: 10px;
+    border: 10px solid #50C7C7;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+#logo {
+    animation-name: mymove;
+    animation-duration: 5s;
+  }
+
+@keyframes mymove {
+    from {width: 50px;
+        opacity:0;}
+    to {width: 425px;
+        opacity:1;}
+  }
+
+
+@media screen and (min-width: 850px){
+
+body>header{
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+    
+.nav_links{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pricing{
+    display: flex;
+    flex-basis: 250px;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.card{
+    width: 250px;
+}
+.card_big{
+    -webkit-transform: scaleY(1.1);
+    transform: scaleY(1.1);
+    z-index: -99;
+}
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+    #logo{
+      animation: none;
+    }
+
+  }
+
+@media print {
+    body>header{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+        
+    .nav_links{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+}
