@@ -83,7 +83,7 @@ a:visited{
 .pricing{
     min-height: 475px;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column ;
     align-items: center;
 }
 
@@ -186,27 +186,30 @@ body>header{
 
     
 .nav_links{
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
 }
 
+.card{
+    flex-basis: 250px;
+}
+
 .pricing{
     display: flex;
-    flex-basis: 250px;
     flex-direction: row;
     justify-content: center;  
 }
 
-.card{
-    width: 250px;
-}
 
 .card_big{
     -webkit-transform: scaleY(1.1);
     transform: scaleY(1.1);
     z-index: -99;
 }
+
+
+
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -218,6 +221,10 @@ body>header{
   }
 
 @media print {
+    body{
+        font-family:none ;
+    }
+
     body>header{
         flex-direction: column;
         width: 100%;
@@ -233,5 +240,25 @@ body>header{
         justify-content: space-around;
     }
 
+    .pricing{
+        flex-direction: row;
+        justify-content: center;  
+    }
 
+    .card{
+        flex-basis: 250px;
+    }
+    
+
+    .card li:nth-child(2n-1):before {
+        content: "👍"; 
+        }
+
+    .card li:nth-child(2n):after {
+    content: "👍"; 
+    }
+
+    #gallery,.gallery{
+        display: none;
+    }
 }
