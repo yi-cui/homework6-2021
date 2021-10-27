@@ -3,9 +3,10 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
+    background-color: #f1f1f1;
     background-image: url('../images/concrete_seamless.png');
     background-repeat:repeat;
-    background: #1f1f1f;
+    
 }
 
 body>header{
@@ -194,12 +195,13 @@ body>header{
     display: flex;
     flex-basis: 250px;
     flex-direction: row;
-    justify-content: center;
-    
+    justify-content: center;  
 }
+
 .card{
     width: 250px;
 }
+
 .card_big{
     -webkit-transform: scaleY(1.1);
     transform: scaleY(1.1);
